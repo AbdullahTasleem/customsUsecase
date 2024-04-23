@@ -4,4 +4,13 @@
   <uuid>b9241521-feb1-4d56-b52d-cfeaf244970b</uuid>
   <decisionModel href="../rules/decisionModel.dmo#6cfb6ca1-9ad4-42b5-9493-2194bdbe077a"/>
   <targetRuleProject href="../../TarifChecker#c23bea3b-8272-4a58-a3c5-811b759b9338"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["TarifChecker"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>
