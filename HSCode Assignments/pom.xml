@@ -65,10 +65,8 @@
     </dependencyManagement>
     <modules>
         <module>.decisionservice</module>
-        <module>AssignRoles</module>
         <module>Tarif Rate</module>
         <module>TarifChecker</module>
-        <module>checkTariffs</module>
         <module>test</module>
     </modules>
 

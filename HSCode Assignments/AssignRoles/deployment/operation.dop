@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="AssignRoles">
-  <name>AssignRoles</name>
-  <uuid>fca2d1c2-1cf2-4b05-ba00-3f11d21ce072</uuid>
-  <decisionModel href="../rules/decisionModel.dmo#bc2b6547-c8fa-4f90-8f75-a55f149699ec"/>
-  <targetRuleProject href="../../AssignRoles#4959c655-690c-41fd-afb1-f632b6423535"/>
-</com.ibm.rules.studio.model.decisionservice:Operation>
