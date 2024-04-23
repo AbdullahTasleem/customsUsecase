@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>get it value</name>
+  <uuid>34401e32-d235-4381-bdeb-0a2b6072e687</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to (decision/100) * the Total value ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

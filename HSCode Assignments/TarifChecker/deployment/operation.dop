@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="TarifChecker">
+  <name>TarifChecker</name>
+  <uuid>b9241521-feb1-4d56-b52d-cfeaf244970b</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#6cfb6ca1-9ad4-42b5-9493-2194bdbe077a"/>
+  <targetRuleProject href="../../TarifChecker#c23bea3b-8272-4a58-a3c5-811b759b9338"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

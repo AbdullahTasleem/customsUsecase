@@ -1,0 +1,12 @@
+
+# cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo#concept.label = GD Info
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.GDInfo(java.lang.String,java.lang.String,long)#phrase.navigation = a new {GD Info} where {0, HSCode} {1, Country} {2, Total value}
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.HSCode#phrase.action = set the HSCode of {this} to {HSCode}
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.HSCode#phrase.navigation = {HSCode} of {this}
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.country#phrase.action = set the Country of {this} to {Country}
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.country#phrase.navigation = {Country} of {this}
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.totalValue#phrase.action = set the Total value of {this} to {Total value}
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.totalValue#phrase.addition_setter = add {Total value} to the Total value of {this}
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.totalValue#phrase.navigation = {Total value} of {this}
+cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo.totalValue#phrase.subtraction_setter = subtract {Total value} from the Total value of {this}

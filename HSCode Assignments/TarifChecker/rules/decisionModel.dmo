@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>6cfb6ca1-9ad4-42b5-9493-2194bdbe077a</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <decision id="node_1" name="Get CD">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo" collection="false" name="GD HSCode Info"/>
+                <output bomType="java.lang.Double" collection="false" name="Get CD"/>
+                <rule defaultRule="false" href="node_1/get%20CD.dmt" kind="DecisionTable" name="get CD"/>
+                <rule defaultRule="false" href="node_1/get%20cd%20value.drl" kind="BusinessRule" name="get cd value"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Get CD" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="GD HSCode Info">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo" collection="false" name="GD HSCode Info"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="GD HSCode Info" typeRef="cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo"/>
+    </inputData>
+    <decision id="node_3" name="Get ACD">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo" collection="false" name="GD HSCode Info"/>
+                <output bomType="java.lang.Double" collection="false" name="Get ACD"/>
+                <rule defaultRule="false" href="node_3/get%20ACD.dmt" kind="DecisionTable" name="get ACD"/>
+                <rule defaultRule="false" href="node_3/calculate%20acd%20triff.drl" kind="BusinessRule" name="calculate acd triff"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Get ACD" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="Get IT">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo" collection="false" name="GD HSCode Info"/>
+                <output bomType="java.lang.Double" collection="false" name="Get IT"/>
+                <rule defaultRule="false" href="node_5/Get%20IT.dmt" kind="DecisionTable" name="Get IT"/>
+                <rule defaultRule="false" href="node_5/get%20it%20value.drl" kind="BusinessRule" name="get it value"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Get IT" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Check Exceptions">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo" collection="false" name="GD HSCode Info"/>
+                <output bomType="java.lang.Double" collection="false" name="Check Exceptions"/>
+                <rule defaultRule="false" href="node_6/Get%20exception%20value.dmt" kind="DecisionTable" name="Get exception value"/>
+                <rule defaultRule="true" href="node_6/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Check Exceptions" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_7" name="Total tax tariff">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Get CD"/>
+                <input bomType="cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo" collection="false" name="GD HSCode Info"/>
+                <input bomType="java.lang.Double" collection="false" name="Get ACD"/>
+                <input bomType="java.lang.Double" collection="false" name="Get IT"/>
+                <input bomType="java.lang.Double" collection="false" name="Check Exceptions"/>
+                <input bomType="java.lang.Double" collection="false" name="Get ST"/>
+                <output bomType="java.lang.Double" collection="false" name="Total tax tariff"/>
+                <rule defaultRule="false" href="node_7/Total%20Tariffs.drl" kind="BusinessRule" name="Total Tariffs"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="Total tax tariff" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_8"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_8" name="Get ST">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.customs_decisions_v1.hscode_assignments.tarifrate.GDInfo" collection="false" name="GD HSCode Info"/>
+                <output bomType="java.lang.Double" collection="false" name="Get ST"/>
+                <rule defaultRule="false" href="node_8/get%20ST.dmt" kind="DecisionTable" name="get ST"/>
+                <rule defaultRule="false" href="node_8/calculate%20tariff.drl" kind="BusinessRule" name="calculate tariff"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_8_ii" name="Get ST" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,0 +1,30 @@
+
+package cp4admin.customs_decisions_v1.hscode_assignments.tarifrate;
+
+
+class GDInfo
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "GDInfo"
+        #de.generated
+{
+    string HSCode
+                property ads.attributeId "6"
+                property com.fasterxml.jackson.annotation.JsonProperty "HSCode"
+                #update;
+    string country
+                property ads.attributeId "5"
+                property com.fasterxml.jackson.annotation.JsonProperty "Country"
+                #update;
+    long totalValue
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "TotalValue"
+                #update;
+    GDInfo(string HSCode, string country, long totalValue)
+                #autoExpand
+                #beanConstructor
+                property groups "BALA"
+                #prototype;
+    GDInfo()
+                #dataio.default;
+}
+

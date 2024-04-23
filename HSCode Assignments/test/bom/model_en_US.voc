@@ -1,0 +1,7 @@
+
+# cp4admin.customs_decisions_v1.hscode_assignments.test.HSCode
+cp4admin.customs_decisions_v1.hscode_assignments.test.HSCode#concept.documentation = 
+cp4admin.customs_decisions_v1.hscode_assignments.test.HSCode#concept.label = HSCode
+cp4admin.customs_decisions_v1.hscode_assignments.test.HSCode.$7121000#instance.documentation = 
+cp4admin.customs_decisions_v1.hscode_assignments.test.HSCode.$7121000#instance.label = 27121000
+cp4admin.customs_decisions_v1.hscode_assignments.test.HSCode.$7222000#instance.label = 27222000

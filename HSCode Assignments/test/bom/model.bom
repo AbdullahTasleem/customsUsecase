@@ -1,0 +1,19 @@
+
+package cp4admin.customs_decisions_v1.hscode_assignments.test;
+
+
+class HSCode
+        extends java.lang.Enum
+        property ads.typeId "1"
+        property com.fasterxml.jackson.annotation.JsonTypeName "HSCode"
+        #de.generated
+{
+    domain {static $7121000, static $7222000}
+    static final readonly cp4admin.customs_decisions_v1.hscode_assignments.test.HSCode $7121000
+                property ads.attributeId "2"
+                property com.fasterxml.jackson.annotation.JsonProperty "27121000";
+    static final readonly cp4admin.customs_decisions_v1.hscode_assignments.test.HSCode $7222000
+                property ads.attributeId "1"
+                property com.fasterxml.jackson.annotation.JsonProperty "27222000";
+}
+
